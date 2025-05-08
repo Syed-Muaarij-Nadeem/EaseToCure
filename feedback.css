@@ -86,6 +86,10 @@ body::before {
     margin: 100px 0;
 }
 
+.feedback-heading {
+    color: #fff;
+}
+
 .form-box {
     display: flex;
     width: 50%;
@@ -199,7 +203,7 @@ form {
 .question-text {
     font-size: 16px;
     margin-bottom: 16px;
-    color: #11114e;
+    color: #000000;
     margin-left: 10px;
 
 }
