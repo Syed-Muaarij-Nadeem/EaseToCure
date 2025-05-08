@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<link rel="stylesheet" href="feedback.css">
+
+<body>
+    <a href="home.html" class="home-container">
+        <!-- <img src="assets/home.png" alt="Home icon" class="home-icon"> -->
+        <i class="bx bxs-home bx-sm home-icon"></i>
+        <h3>Home</h3>
+    </a>
+    <!-- <div class="home-container"> -->
+
+    </div>
+    <div class="container">
+        <div class="animation-box">
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+            <dotlottie-player src="https://lottie.host/9d5f3275-c5a3-463e-a7a9-fab260d555a5/g4A7s33UzT.lottie"
+                background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></dotlottie-player>
+        </div>
+        <div class="form-box">
+            <form action="#">
+                <h1>Feedback</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Your Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Your Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+
+                <div class="survey-container">
+                    <!-- Question Slides -->
+                    <div class="question-slide active">
+                        <div class="question-text">1. How satisfied are you with our service?</div>
+                        <div class="rating-stars">
+                            <span class="star" data-value="1"></span>
+                            <span class="star" data-value="2"></span>
+                            <span class="star" data-value="3"></span>
+                            <span class="star" data-value="4"></span>
+                            <span class="star" data-value="5"></span>
+                            <span class="rating-counter">0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-slide">
+                        <div class="question-text">2. How likely are you to recommend us to a friend?</div>
+                        <div class="rating-stars">
+                            <span class="star" data-value="1"></span>
+                            <span class="star" data-value="2"></span>
+                            <span class="star" data-value="3"></span>
+                            <span class="star" data-value="4"></span>
+                            <span class="star" data-value="5"></span>
+                            <span class="rating-counter">0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-slide">
+                        <div class="question-text">3. Was our staff friendly and helpful?</div>
+                        <div class="rating-stars">
+                            <span class="star" data-value="1"></span>
+                            <span class="star" data-value="2"></span>
+                            <span class="star" data-value="3"></span>
+                            <span class="star" data-value="4"></span>
+                            <span class="star" data-value="5"></span>
+                            <span class="rating-counter">0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-slide">
+                        <div class="question-text">4. How do you rate our pricing?</div>
+                        <div class="rating-stars">
+                            <span class="star" data-value="1"></span>
+                            <span class="star" data-value="2"></span>
+                            <span class="star" data-value="3"></span>
+                            <span class="star" data-value="4"></span>
+                            <span class="star" data-value="5"></span>
+                            <span class="rating-counter">0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-slide">
+                        <div class="question-text">5. How likely are you to return in the future?</div>
+                        <div class="rating-stars">
+                            <span class="star" data-value="1"></span>
+                            <span class="star" data-value="2"></span>
+                            <span class="star" data-value="3"></span>
+                            <span class="star" data-value="4"></span>
+                            <span class="star" data-value="5"></span>
+                            <span class="rating-counter">0</span>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="nav-arrows">
+                        <img src="assets/arrow.png" id="prevArrow" alt="Previous" />
+                        <img src="assets/arrow.png" id="nextArrow" class="next" alt="Next" />
+                    </div>
+                </div>
+
+
+                <div class="input-box">
+                    <textarea placeholder="Your custom feedback"></textarea>
+                    <i class='bx bxs-comment-detail'></i>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="custom-alert" id="customAlert">
+        <div class="alert-content">
+            <i class="bx bxs-error alert-icon"></i>
+            <h2 class="alert-title">Incomplete Feedback</h2>
+            <p class="alert-message">Rate all questions to continue!</p>
+            <button class="alert-button" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+    <!-- 🔥 Success Animation Overlay Component -->
+    <div id="successOverlay" class="success-overlay">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"></script>
+        <dotlottie-player src="https://lottie.host/3d1dc27b-11e5-4d20-8dfa-44b7998f6438/j9sbYRhyPa.lottie"
+            background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+
+        <h2>Feedback Submitted Successfully</h2>
+    </div>
+
+
+
+    <script src="feedback.js"></script>
+</body>
+
+</html>
